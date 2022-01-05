@@ -1,22 +1,22 @@
 @font-face {
-  font-family: "MBCorpo-Title";
-  src: url(../../fonts/MBCorpoATitleCond-Regular-Web.woff2);
+  font-family: MBCorpo-Title;
+  src: url(../fonts/MBCorpoATitleCond-Regular-Web.woff2);
   font-weight: 400;
 }
 @font-face {
-  font-family: "MBCorpo-Text";
-  src: url(../../fonts/MBCorpoSText-Regular-Web.woff2);
+  font-family: MBCorpo-Text;
+  src: url(../fonts/MBCorpoSText-Regular-Web.woff2);
   font-weight: 400;
 }
 
 @font-face {
-  font-family: "DaimlerCAC-Regular";
-  src: url(../../fonts/DaimlerCAC-Regular.woff2);
+  font-family: DaimlerCAC-Regular;
+  src: url(../fonts/DaimlerCAC-Regular.woff2);
   font-weight: 400;
 }
 @font-face {
-  font-family: "DaimlerCS-Regular";
-  src: url(../../fonts/DaimlerCS-Regular.woff2);
+  font-family: DaimlerCS-Regular;
+  src: url(../fonts/DaimlerCS-Regular.woff2);
   font-weight: 400;
 }
 
@@ -44,7 +44,7 @@ body {
   h1,
   h2,
   h3 {
-    font-family: MBCorpo Title, DaimlerCAC-Regular, Helvetica, Arial, sans-serif;
+    font-family: MBCorpo-Title, DaimlerCAC-Regular, Helvetica, Arial, sans-serif;
   }
   p {
     margin-bottom: 14px;
