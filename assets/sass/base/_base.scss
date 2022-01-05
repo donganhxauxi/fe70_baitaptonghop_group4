@@ -1,19 +1,59 @@
+@font-face {
+  font-family: "MBCorpo-Title";
+  src: url(../../fonts/MBCorpoATitleCond-Regular-Web.woff2);
+  font-weight: 400;
+}
+@font-face {
+  font-family: "MBCorpo-Text";
+  src: url(../../fonts/MBCorpoSText-Regular-Web.woff2);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "DaimlerCAC-Regular";
+  src: url(../../fonts/DaimlerCAC-Regular.woff2);
+  font-weight: 400;
+}
+@font-face {
+  font-family: "DaimlerCS-Regular";
+  src: url(../../fonts/DaimlerCS-Regular.woff2);
+  font-weight: 400;
+}
+
 *,
 *::after,
 *::before {
   margin: 0;
   padding: 0;
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 html {
   // This defines what 1rem is
-  font-size: 14px;
+  font-size: 10px;
+  line-height: 44px;
+  font-weight: 400;
+  text-align: left;
+  scroll-behavior: smooth;
 }
 
 body {
-  box-sizing: border-box;
-  font-family: $font;
+  background-color: $primary-bg;
+  color: $primary-text;
+  font-family: MBCorpo-Text, DaimlerCS-Regular, Helvetica, Arial, sans-serif;
+  h1,
+  h2,
+  h3 {
+    font-family: MBCorpo Title, DaimlerCAC-Regular, Helvetica, Arial, sans-serif;
+  }
+  p {
+    margin-bottom: 14px;
+    line-height: 2.2rem;
+  }
+  hr {
+    border-top: 1px solid #333333;
+    margin: 30px 0;
+  }
 }
 
 a,
