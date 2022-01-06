@@ -1,0 +1,44 @@
+.brandhub {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1680px;
+  color: $primary-text;
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+  &__container {
+    max-width: calc(100% - 60px);
+    margin: 0 auto;
+    .spacer.large {
+      height: 2.1rem;
+    }
+    .brandhub__heading {
+      .brandhub__icon {
+        display: inline-block;
+        fill: currentColor;
+        svg {
+          width: 1.2rem;
+          height: 1.4rem;
+          vertical-align: baseline;
+        }
+      }
+      span.spacer {
+        width: 20px;
+        display: inline-block;
+      }
+    }
+    .brandhub__description {
+      p {
+        sup {
+          font-size: 1.05rem;
+        }
+        a {
+          color: $primary-theme;
+
+          &:hover {
+            color: $active-theme;
+          }
+        }
+      }
+    }
+  }
+}
