@@ -10,41 +10,85 @@
 
   p {
     margin: 14px auto;
-    font-size: 12px;
+    font-size: 14px;
   }
 
   &__text {
     padding: 110px 0;
   }
-}
-
-.channels {
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
-
-  img {
-    width: 100%;
-  }
-
-  &__border {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    height: 0px;
-    transition: all 0.2s;
-
-    div {
-      background-color: $color-secondary;
-      height: 100%;
-      margin: 0 15px;
+  .container-text{
+    max-width: 520px !important;
+    margin: 0 auto;
+    padding: 0;
+    a:not(.btn){
+      color: $color-secondary;
+      &:hover{
+        color: $active-theme;
+        text-decoration: underline;
+      }
     }
   }
+  .container:not(.container-text) {
+    @include Responsive(MD) {
+      width: 100%;
+      max-width: calc(100% - 60px);
+      margin: 0 30px;
+    }
+    .row {
+      width: 951px;
+      margin: 0 auto;
+      flex-wrap: wrap;
+      @include Responsive(XXL) {
+        width: 876px;
+      }
+      @include Responsive(XL) {
+        width: 714px;
+      }
+      @include Responsive(LG) {
+        width: 522px;
+      }
+      @include Responsive(MD) {
+        width: 100%;
+      }
+      .channels {
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        padding: 0 9px;
+        img {
+          width: 100%;
+        }
 
-  &:hover {
-    .channels__border {
-      height: 7px;
+        &__border {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          width: 100%;
+          height: 0px;
+          transition: all 0.2s;
+
+          div {
+            background-color: $color-secondary;
+            height: 100%;
+            margin: 0 9px;
+            @include Responsive(MD) {
+              margin: 0 4.48px ;
+            }
+          }
+        }
+
+        &:hover {
+          .channels__border {
+            width: 100%;
+            height: 7px;
+          }
+        }
+        @include Responsive(MD) {
+          flex-basis: 50%;
+          max-width: 50%;
+          padding: 4.48px;
+        }
+      }
     }
   }
 }

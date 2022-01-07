@@ -314,6 +314,7 @@
         flex-direction: row;
         justify-content: space-evenly;
         display: none;
+        z-index: 99999;
         @include Responsive(MD) {
           display: flex;
         }
