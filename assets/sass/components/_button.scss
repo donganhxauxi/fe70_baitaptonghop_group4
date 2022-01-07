@@ -15,4 +15,16 @@
       background-color: $color-secondary-active;
     }
   }
+
+  &--showmore {
+    border: 1px solid #202020;
+    color: #fff;
+    background: linear-gradient(#303030, #202020);
+    text-align: center;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: Helvetica, Arial, sans-serif;
+    margin-top: 2.5rem;
+  }
 }
