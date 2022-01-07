@@ -1,0 +1,50 @@
+.headline {
+  background-color: black;
+  color: $color-primary;
+
+  h2 {
+    font-size: 34px;
+    line-height: 44px;
+    margin: 14px auto;
+  }
+
+  p {
+    margin: 14px auto;
+    font-size: 12px;
+  }
+
+  &__text {
+    padding: 110px 0;
+  }
+}
+
+.channels {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+
+  img {
+    width: 100%;
+  }
+
+  &__border {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 0px;
+    transition: all 0.2s;
+
+    div {
+      background-color: $color-secondary;
+      height: 100%;
+      margin: 0 15px;
+    }
+  }
+
+  &:hover {
+    .channels__border {
+      height: 7px;
+    }
+  }
+}
