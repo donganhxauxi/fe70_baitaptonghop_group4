@@ -217,15 +217,7 @@ a:link {
   padding: 0 !important;
 }
 
-.card {
-  margin-top: 12px;
-}
-
-.card .item {
-  width: 80%;
-}
-
-.card .image {
+.image {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -233,7 +225,7 @@ a:link {
   overflow: hidden;
 }
 
-.card .image-container {
+.image-container {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: auto auto auto auto;
@@ -243,7 +235,7 @@ a:link {
 }
 
 @media screen and (max-width: 1580px) {
-  .card .image-container {
+  .image-container {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: auto auto auto;
@@ -254,7 +246,7 @@ a:link {
 }
 
 @media screen and (max-width: 1280px) {
-  .card .image-container {
+  .image-container {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: auto auto;
@@ -265,7 +257,7 @@ a:link {
 }
 
 @media screen and (max-width: 768px) {
-  .card .image-container {
+  .image-container {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: auto;
@@ -275,7 +267,7 @@ a:link {
   }
 }
 
-.card .image-1 {
+.image-1 {
   -ms-grid-column: 1;
       grid-column-start: 1;
   grid-column-end: 3;
@@ -285,7 +277,7 @@ a:link {
 }
 
 @media screen and (max-width: 1280px) {
-  .card .image-1 {
+  .image-1 {
     -ms-grid-column: 1;
         grid-column-start: 1;
     grid-column-end: 2;
@@ -295,7 +287,7 @@ a:link {
   }
 }
 
-.card .image-10 {
+.image-10 {
   -ms-grid-column: 1;
       grid-column-start: 1;
   grid-column-end: 3;
@@ -305,7 +297,7 @@ a:link {
 }
 
 @media screen and (max-width: 1280px) {
-  .card .image-10 {
+  .image-10 {
     -ms-grid-column: 1;
         grid-column-start: 1;
     grid-column-end: 2;
@@ -315,27 +307,27 @@ a:link {
   }
 }
 
-.card .img {
+.img {
   position: relative;
   cursor: pointer;
 }
 
-.card .img:hover .img__text {
+.img:hover .img__text {
   height: 50%;
 }
 
-.card .img:hover .img__text p {
+.img:hover .img__text p {
   opacity: 1;
   visibility: initial;
   position: relative;
   top: 10px;
 }
 
-.card .img:hover .img__icon {
+.img:hover .img__icon {
   opacity: 0;
 }
 
-.card .img__text {
+.img__text {
   position: absolute;
   width: 100%;
   height: 25%;
@@ -349,11 +341,11 @@ a:link {
   text-align: left;
 }
 
-.card .img__text h2 {
+.img__text h2 {
   font-size: 22px;
 }
 
-.card .img__text p {
+.img__text p {
   font-size: 14px;
   opacity: 0;
   visibility: hidden;
@@ -363,7 +355,7 @@ a:link {
   transition: all 0.5s;
 }
 
-.card .img__icon {
+.img__icon {
   position: absolute;
   z-index: 999;
   display: -webkit-box;
@@ -378,14 +370,14 @@ a:link {
   bottom: 25%;
 }
 
-.card .img__icon i {
+.img__icon i {
   color: #333;
   padding: 7px 12px;
   background-color: #bfbfbf;
   font-size: 14px;
 }
 
-.card .img__icon p {
+.img__icon p {
   margin-bottom: 0 !important;
   line-height: initial;
   padding: 8px 15px;
@@ -515,7 +507,7 @@ a:link {
 }
 
 .header__content {
-  max-width: calc(100% - 60px);
+  max-width: 1440px;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
