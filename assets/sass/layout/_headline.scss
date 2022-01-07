@@ -6,6 +6,10 @@
     font-size: 34px;
     line-height: 44px;
     margin: 14px auto;
+    @include Responsive(LG){
+      font-size: 26px;
+      line-height: 32px;
+    }
   }
 
   p {
