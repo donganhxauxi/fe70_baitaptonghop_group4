@@ -579,45 +579,11 @@ a:link {
 .carousel {
   width: 100%;
   margin: 0 auto;
-  max-width: 1680px;
 }
 
 .carousel__content {
-  max-width: calc(100% - 20px);
+  width: 100%;
   margin: 0 auto;
-}
-
-.carousel__content .slide-arrow {
-  position: absolute;
-  display: block;
-  z-index: 10;
-  top: 50%;
-  line-height: 1;
-  margin-top: -2em;
-  cursor: pointer;
-}
-
-.carousel__content .slide-arrow:hover {
-  opacity: 0.6;
-}
-
-.carousel__content .slide-arrow.swiper-button-disabled {
-  display: none;
-}
-
-.carousel__content .slide-arrow__prev {
-  left: 0;
-}
-
-.carousel__content .slide-arrow__next {
-  right: 0;
-}
-
-.carousel__content .slide-arrow .material-icons {
-  font-size: 50px;
-  color: #fff;
-  text-shadow: 0 0 5px #333;
-  line-height: 1;
 }
 
 .carousel__content .swiper-slide {
@@ -640,9 +606,26 @@ a:link {
   height: 100%;
 }
 
+@media only screen and (max-width: 1279px) {
+  .carousel__content .item__layout {
+    position: static;
+    background-color: #f4f4f4;
+    color: black;
+    height: 60vh;
+    padding: 0 5rem;
+  }
+}
+
 .carousel__content .item__layout h1 {
   font-size: 48px;
   margin-top: 10rem;
+}
+
+@media only screen and (max-width: 1279px) {
+  .carousel__content .item__layout h1 {
+    font-size: 31px;
+    margin-top: 20px;
+  }
 }
 
 .carousel__content .item__layout a {
@@ -661,7 +644,8 @@ a:link {
 
 .carousel__content .swiper-slide img {
   width: 100%;
-  height: 718px;
+  height: 100%;
+  display: block;
 }
 
 .carousel__content .swiper-button-next,
@@ -669,6 +653,22 @@ a:link {
   color: #fff;
   margin-left: 3rem;
   margin-right: 3rem;
+}
+
+@media only screen and (max-width: 1279px) {
+  .carousel__content .swiper-button-next,
+  .carousel__content .swiper-button-prev {
+    margin-left: 0rem;
+    margin-right: 0rem;
+    top: 13%;
+  }
+}
+
+@media only screen and (max-width: 1279px) {
+  .carousel__content .swiper-button-next::after,
+  .carousel__content .swiper-button-prev::after {
+    font-size: 20px;
+  }
 }
 
 .carousel__content .carousel___search {
@@ -680,7 +680,13 @@ a:link {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: -2px;
+  margin-top: -5px;
+}
+
+@media only screen and (max-width: 1279px) {
+  .carousel__content .carousel___search {
+    padding: 16px 5rem;
+  }
 }
 
 .carousel__content .carousel___search form {

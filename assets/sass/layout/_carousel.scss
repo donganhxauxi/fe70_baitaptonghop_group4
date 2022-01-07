@@ -1,69 +1,9 @@
-// .swiper {
-//     width: 100%;
-//     height: 100%;
-//   }
-
-//   .swiper-slide {
-//     text-align: center;
-//     font-size: 18px;
-//     background: #fff;
-
-//     /* Center slide text vertically */
-//     display: -webkit-box;
-//     display: -ms-flexbox;
-//     display: -webkit-flex;
-//     display: flex;
-//     -webkit-box-pack: center;
-//     -ms-flex-pack: center;
-//     -webkit-justify-content: center;
-//     justify-content: center;
-//     -webkit-box-align: center;
-//     -ms-flex-align: center;
-//     -webkit-align-items: center;
-//     align-items: center;
-//   }
-
-//   .swiper-slide img {
-//     display: block;
-//     width: 100%;
-//     height: 100%;
-//     object-fit: cover;
-//   }
-
 .carousel {
   width: 100%;
   margin: 0 auto;
-  max-width: 1680px;
   &__content {
-    max-width: calc(100% - 20px);
+    width: 100%;
     margin: 0 auto;
-    .slide-arrow {
-      position: absolute;
-      display: block;
-      z-index: 10;
-      top: 50%;
-      line-height: 1;
-      margin-top: -2em;
-      cursor: pointer;
-      &:hover {
-        opacity: 0.6;
-      }
-      &.swiper-button-disabled {
-        display: none;
-      }
-      &__prev {
-        left: 0;
-      }
-      &__next {
-        right: 0;
-      }
-      .material-icons {
-        font-size: 50px;
-        color: #fff;
-        text-shadow: 0 0 5px #333;
-        line-height: 1;
-      }
-    }
     .swiper-slide {
       position: relative;
     }
@@ -74,9 +14,20 @@
       flex-direction: column;
       justify-content: space-between;
       height: 100%;
+      @include Responsive(XL) {
+        position: static;
+        background-color: #f4f4f4;
+        color: black;
+        height: 60vh;
+        padding: 0 5rem;
+      }
       h1 {
         font-size: 48px;
         margin-top: 10rem;
+        @include Responsive(XL) {
+          font-size: 31px;
+          margin-top: 20px;
+        }
       }
       a {
         background: #333;
@@ -96,7 +47,8 @@
     .swiper-slide {
       img {
         width: 100%;
-        height: 718px;
+        height: 100%;
+        display: block;
       }
     }
     .swiper-button-next,
@@ -104,38 +56,55 @@
       color: #fff;
       margin-left: 3rem;
       margin-right: 3rem;
+      @include Responsive(XL) { 
+        margin-left: 0rem;
+        margin-right: 0rem;
+        top: 13%;
+      }
     }
+
+    .swiper-button-next::after,
+    .swiper-button-prev::after  {
+      @include Responsive(XL) { 
+        font-size: 20px;
+      }
+      
+    }
+
     .carousel___search {
       background-color: #333;
       padding: 26px 20rem;
       display: flex;
       justify-content: center;
-      margin-top: -2px;
+      margin-top: -5px;
+      @include Responsive(XL) { 
+        padding: 16px 5rem;
+      }
       form {
         margin: 0;
         width: 100%;
         position: relative;
         .form-control {
-          background-color: #ececec ;
-          border: 1px solid #ececec ;
+          background-color: #ececec;
+          border: 1px solid #ececec;
           color: #333 !important;
           display: inline-block;
           font-size: 16px;
           height: 40px;
-          padding: 0.355rem 1rem 0.215rem 1rem ;
+          padding: 0.355rem 1rem 0.215rem 1rem;
           vertical-align: baseline;
           width: calc(100% - 4.425rem);
           margin: 0 auto;
           border-radius: 0;
         }
         .btn {
-            position: absolute;
-            right: 4rem;
-            top: -2.5rem;
-            svg {
-                width: 20px;
-                height: 20px;
-            }
+          position: absolute;
+          right: 4rem;
+          top: -2.5rem;
+          svg {
+            width: 20px;
+            height: 20px;
+          }
         }
       }
     }
