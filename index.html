@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="icon" href="./assets/images/logo.svg" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -16,11 +17,18 @@
     />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="stylesheet" href="./assets/css/main.css" />
     <title>
@@ -29,42 +37,332 @@
   </head>
 
   <body>
+    <!-- this is header -->
+    <header class="header">
+      <div class="header__content">
+        <div class="header__left">
+          <div class="header__logo">
+            <a href="#">
+              <img
+                src="https://www.mercedes-benz.com/etc/designs/brandhub/frontend/static-assets/header/logo.svg"
+                alt="img"
+              />
+              <img
+                src="https://www.mercedes-benz.com/etc/designs/brandhub/frontend/static-assets/header/brand-without-claim.svg"
+              />
+            </a>
+          </div>
+        </div>
+        <div class="header__right">
+          <div class="menu">
+            <nav class="menu__sub">
+              <ul>
+                <li>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 951 1024"
+                    width="1.0714285714285714rem"
+                    height="1.1428571428571428rem"
+                    class="brandhub-icon"
+                  >
+                    <path
+                      d="M950.857 1024H0V0h950.857v1024zM877.714 73.143H73.143v877.714h804.571V73.143zm-336.457 665.6v-307.2H380.343v65.829h73.143v241.371h-80.457v65.829h234.057v-65.829h-65.829zM482.743 358.4c36.571 0 65.829-29.257 65.829-65.829 0-43.886-29.257-73.143-65.829-73.143s-65.829 29.257-65.829 73.143c0 36.571 29.257 65.829 65.829 65.829z"
+                      fill="currentColor"
+                    ></path>
+                  </svg>
+                  <span class="hide">Provider/Privacy Statement</span>
+                </li>
+                <li>Deutsch</li>
+              </ul>
+            </nav>
+            <nav
+              class="menu__main navbar navbar-expand-lg navbar-light bg-light"
+            >
+              <a class="nav-link show" href="#"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 57.3 76.3"
+                  width="0.8571428571428571rem"
+                  height="1.1428571428571428rem"
+                  class="brandhub-icon"
+                >
+                  <path
+                    d="M23.838 8.911c-8.243 0-14.927 6.684-14.927 14.927 0 8.132 6.795 14.927 14.927 14.927s14.927-6.795 14.927-14.927c-.001-8.243-6.795-14.927-14.927-14.927zm23.838 14.927c0 6.015-2.005 11.251-5.904 15.595l13.813 23.615c1.225 2.116 1.782 4.121 1.782 6.015 0 4.01-3.342 7.24-7.686 7.24-3.119 0-5.904-1.894-7.797-5.347L28.182 47.23c-1.225.334-2.673.445-4.344.445C10.805 47.676 0 36.871 0 23.838S10.805 0 23.838 0c12.587 0 23.838 10.582 23.838 23.838z"
+                    fill="currentColor"
+                  ></path>
+                </svg>
+              </a>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarTogglerDemo01"
+                aria-controls="navbarTogglerDemo01"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#"> Company </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#"> Vehicles </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#"> Design </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#"> Innovation </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#"> Museum & History </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#"> Sports </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#"> Events </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#"> Lifestyle </a>
+                  </li>
+                  <li class="nav-item hide">
+                    <a class="nav-link" href="#"
+                      ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 57.3 76.3"
+                        width="0.8571428571428571rem"
+                        height="1.1428571428571428rem"
+                        class="brandhub-icon"
+                      >
+                        <path
+                          d="M23.838 8.911c-8.243 0-14.927 6.684-14.927 14.927 0 8.132 6.795 14.927 14.927 14.927s14.927-6.795 14.927-14.927c-.001-8.243-6.795-14.927-14.927-14.927zm23.838 14.927c0 6.015-2.005 11.251-5.904 15.595l13.813 23.615c1.225 2.116 1.782 4.121 1.782 6.015 0 4.01-3.342 7.24-7.686 7.24-3.119 0-5.904-1.894-7.797-5.347L28.182 47.23c-1.225.334-2.673.445-4.344.445C10.805 47.676 0 36.871 0 23.838S10.805 0 23.838 0c12.587 0 23.838 10.582 23.838 23.838z"
+                          fill="currentColor"
+                        ></path></svg
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- this is carousel -->
+    <section class="carousel">
+      <div class="carousel__content">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide" data-swiper-autoplay="2000">
+              <img
+                src="https://www.mercedes-benz.com/en/vehicles/passenger-cars/concept-cars/vision-eqxx-the-new-benchmark-of-effiency/_jcr_content/root/slider/sliderchilditems/slideritem/image/MQ7-0-image-20220103172639/01-mercedes-benz-vision-eqxx-2022-3400x1440.jpeg"
+                alt="img"
+              />
+              <div class="item__layout">
+                <div class="item__text">
+                  <h1 class="wow animate__fadeInDown" data-wow-duration="1s">
+                    The VISION EQXX.
+                  </h1>
+                  <a
+                    href="#"
+                    class="wow animate__fadeInDown"
+                    data-wow-duration="1s"
+                  >
+                    More about the VISION EQXX
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide" data-swiper-autoplay="2000">
+              <img
+                src="https://www.mercedes-benz.com/en/_jcr_content/root/slider_copy_copy_cop/sliderchilditems/slideritem_copy_621776732/image/MQ7-0-image-20210907110146/mercedes-benz-the-all-electric-eqe-2021-v295-3400x1440.jpeg"
+                alt="img"
+              />
+              <div class="item__layout">
+                <div class="item__text">
+                  <h1 class="wow animate__fadeInDown" data-wow-duration="1s">
+                    The EQE.
+                  </h1>
+                  <a
+                    href="#"
+                    class="wow animate__fadeInDown"
+                    data-wow-duration="1s"
+                  >
+                    Learn more about the EQE
+                  </a>
+                </div>
+                <div
+                  class="item__subtext wow animate__fadeInDown"
+                  data-wow-duration="1s"
+                >
+                  <p>
+                    EQE 350 vorläufige Angaben WLTP:<br />
+                    Stromverbrauch kombiniert: 19,3–15,7 kWh/100 km;<br />
+                    CO₂-Emissionen kombiniert: 0 g/km.
+                  </p>
+                  <p>
+                    Angaben zum Stromverbrauch und zur Reichweite sind vorläufig
+                    und wurden intern nach <br />Maßgabe der
+                    Zertifizierungsmethode „WLTP-Prüfverfahren“ ermittelt. Es
+                    liegen bislang<br />
+                    weder bestätigte Werte vom TÜV noch eine
+                    <br />EG-Typgenehmigung noch eine Konformitätsbescheinigung
+                    mit amtlichen Werten vor. Abweichungen zwischen den<br />
+                    Angaben und den amtlichen Werten sind möglich.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide" data-swiper-autoplay="2000">
+              <img src="./assets/images/pic2.jpg" alt="img" />
+              <div class="item__layout">
+                <div class="item__text">
+                  <h1 class="wow animate__fadeInDown" data-wow-duration="1s">
+                    The Concept EQG.
+                  </h1>
+                  <a
+                    href="#"
+                    class="wow animate__fadeInDown"
+                    data-wow-duration="1s"
+                  >
+                    More about The Concept EQG.
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide" data-swiper-autoplay="2000">
+              <img
+                src="https://www.mercedes-benz.com/en/_jcr_content/root/slider_copy_copy_cop/sliderchilditems/slideritem_1794021145/image/MQ7-0-image-20210906100738/maybach-3400x1440.jpeg"
+                alt="img"
+              />
+              <div class="item__layout">
+                <div class="item__text">
+                  <h1 class="wow animate__fadeInDown" data-wow-duration="1s">
+                    The Concept Mercedes-Maybach EQS.
+                  </h1>
+                  <a
+                    href="#"
+                    class="wow animate__fadeInDown"
+                    data-wow-duration="1s"
+                  >
+                    More about The Concept Mercedes-Maybach EQS..
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide" data-swiper-autoplay="2000">
+              <img
+                src="https://www.mercedes-benz.com/en/_jcr_content/root/slider_copy_copy_cop/sliderchilditems/slideritem/image/MQ7-0-image-20210905183015/01-mercedes-benz-iaa-mobility-2021-3400x1440.jpeg"
+                alt="img"
+              />
+              <div class="item__layout">
+                <div class="item__text">
+                  <h1 class="wow animate__fadeInDown" data-wow-duration="1s">
+                    IAA MOBILITY 2021.
+                  </h1>
+                  <a
+                    href="#"
+                    class="wow animate__fadeInDown"
+                    data-wow-duration="1s"
+                  >
+                    Learn more
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide" data-swiper-autoplay="2000">
+              <img
+                src="https://www.mercedes-benz.com/en/_jcr_content/root/slider_copy_copy_cop/sliderchilditems/slideritem_791391558/image/MQ7-0-image-20210905183018/mercedes-benz-eqs-v297-homepage-3400x1440-03-2021.jpeg"
+                alt="img"
+              />
+              <div class="item__layout">
+                <div class="item__text">
+                  <h1 class="wow animate__fadeInDown" data-wow-duration="1s">
+                    The new EQS. This is for you, world.
+                  </h1>
+                  <a
+                    href="#"
+                    class="wow animate__fadeInDown"
+                    data-wow-duration="1s"
+                  >
+                    Learn more about the EQS
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+        <div class="carousel___search">
+          <form class="form-inline brandhub-search__form">
+            <input
+              type="text"
+              class="form-control brandhub-search__input"
+              placeholder="I am looking for..."
+            />
+            <button class="btn btn-default" type="submit">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 57.3 76.3"
+                width="0.8571428571428571rem"
+                height="1.1428571428571428rem"
+                class="brandhub-icon"
+              >
+                <path
+                  d="M23.838 8.911c-8.243 0-14.927 6.684-14.927 14.927 0 8.132 6.795 14.927 14.927 14.927s14.927-6.795 14.927-14.927c-.001-8.243-6.795-14.927-14.927-14.927zm23.838 14.927c0 6.015-2.005 11.251-5.904 15.595l13.813 23.615c1.225 2.116 1.782 4.121 1.782 6.015 0 4.01-3.342 7.24-7.686 7.24-3.119 0-5.904-1.894-7.797-5.347L28.182 47.23c-1.225.334-2.673.445-4.344.445C10.805 47.676 0 36.871 0 23.838S10.805 0 23.838 0c12.587 0 23.838 10.582 23.838 23.838z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
     <section class="headline">
       <div
         class="container headline__text text-align wow animate__animated animate__fadeInUp"
       >
-        <h2>
-          Welcome to the Mercedes-Benz international <br />
-          website.
-        </h2>
-        <p>
-          Exclusive reports and current films: experience a broad range of
-          topics from the <br />
-          fascinating world of Mercedes-Benz. To find out about offers in your
-          location, please <br />
-          go to the local Mercedes-Benz website.
-        </p>
-        <p>
-          This is the International website of Mercedes-Benz AG. <br />
-          Visitors from the U.S., please visit our U.S. website www.mbusa.com.
-        </p>
-        <a class="btn btn--secondary" href="#">Bring me to my local website</a>
+        <div class="container container-text">
+          <h2>Welcome to the Mercedes-Benz international website.</h2>
+          <p>
+            Exclusive reports and current films: experience a broad range of
+            topics from the fascinating world of Mercedes-Benz. To find out
+            about offers in your location, please go to the local Mercedes-Benz
+            website.
+          </p>
+          <p>
+            This is the International website of Mercedes-Benz AG. <br />
+            Visitors from the U.S., please visit our U.S. website
+            <a href="http://" target="_blank" rel="noopener noreferrer"
+              >www.mbusa.com.</a
+            >
+          </p>
+          <a class="btn btn--secondary" href="#"
+            >Bring me to my local website</a
+          >
+        </div>
       </div>
       <div class="container wow animate__animated animate__fadeInUp">
         <div class="row">
-          <div class="col-lg-4 col-sm-6 channels">
-            <img src="./assets/images/me-channel-tile_new.webp" />
-            <div class="channels__border">
-              <div></div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-sm-6 channels">
+          <div class="col-4 channels">
             <img src="./assets/images/museum-channel-tile.webp" />
             <div class="channels__border">
               <div></div>
             </div>
           </div>
-          <div class="col-lg-4 col-sm-6 channels">
+          <div class="col-4 channels">
+            <img src="./assets/images/me-channel-tile_new.webp" />
+            <div class="channels__border">
+              <div></div>
+            </div>
+          </div>
+          <div class="col-4 channels">
             <img src="./assets/images/she-channel-tile.webp" />
             <div class="channels__border">
               <div></div>
@@ -74,12 +372,7 @@
       </div>
     </section>
     <section class="container-outer wow animate__animated animate__fadeInUp">
-      <ul
-        class="nav nav-pills"
-        id="pills-tab"
-        role="tablist"
-        style="margin-bottom: 20px"
-      >
+      <ul class="nav nav-pills" id="pills-tab" role="tablist">
         <li class="nav-item">
           <a
             class="nav-link active"
@@ -160,19 +453,20 @@
           >
         </li>
       </ul>
-      <div
-        class="tab-content"
-        id="pills-tabContent"
-        style="margin-bottom: 20px"
-      >
+      <div class="tab-content" id="pills-tabContent">
         <div
           class="tab-pane fade show active"
           id="pills-home"
           role="tabpanel"
           aria-labelledby="pills-home-tab"
         >
-          <div class="image-container wow animate__animated animate__fadeInUp">
+          <div class="image-container">
             <div class="image-1 img">
+              <img
+                src="./assets/images/00-mercedes-benz-vision-eqxx-2022-2560x1440.webp"
+                style="width: 100%"
+                class="image"
+              />
               <div class="img__text">
                 <h2>VISION EQXX: The new benchmark of efficiency.</h2>
                 <p>
@@ -180,13 +474,13 @@
                   enables an electric range of over 1,000 km.
                 </p>
               </div>
-              <img
-                src="./assets/images/00-mercedes-benz-vision-eqxx-2022-2560x1440.webp"
-                style="width: 100%"
-                class="image"
-              />
             </div>
             <div class="img">
+              <img
+                src="./assets/images/00-design-the-big-small-world-of-mercedes-benz-2560x1440.webp"
+                class="image"
+              />
+
               <div class="img__text">
                 <h2>The big small world of Mercedes-Benz.</h2>
                 <p>
@@ -194,12 +488,13 @@
                   true-to-the-original miniatures of their bigger...
                 </p>
               </div>
-              <img
-                src="./assets/images/00-design-the-big-small-world-of-mercedes-benz-2560x1440.webp"
-                class="image"
-              />
             </div>
             <div class="img">
+              <img
+                src="./assets/images/01-mercedes-benz-classic-h-number-plate-2022-2560x1440.webp"
+                class="image"
+              />
+
               <div class="img__text">
                 <h2>“H” as in “Happy New Year”.</h2>
                 <p>
@@ -207,12 +502,13 @@
                   able to obtain the H number plate for the fi...
                 </p>
               </div>
-              <img
-                src="./assets/images/01-mercedes-benz-classic-h-number-plate-2022-2560x1440.webp"
-                class="image"
-              />
             </div>
             <div class="img">
+              <img
+                src="./assets/images/mercedes-eq-formula-e-team-stoffel-vandoorne-2022_V2jpeg.webp"
+                class="image"
+              />
+
               <div class="img__text">
                 <h2>Stoffel Vandoorne</h2>
                 <p>
@@ -220,12 +516,13 @@
                   Formula E Team. get to know him.
                 </p>
               </div>
-              <img
-                src="./assets/images/mercedes-eq-formula-e-team-stoffel-vandoorne-2022_V2jpeg.webp"
-                class="image"
-              />
             </div>
             <div class="img">
+              <img
+                src="./assets/images/mercedes-eq-formula-e-team-nyck-de-vries-2022_V2jpeg.webp"
+                class="image"
+              />
+
               <div class="img__text">
                 <h2>Nyck de Vries</h2>
                 <p>
@@ -233,12 +530,13 @@
                   Formula E Team. Get to know him.
                 </p>
               </div>
-              <img
-                src="./assets/images/mercedes-eq-formula-e-team-nyck-de-vries-2022_V2jpeg.webp"
-                class="image"
-              />
             </div>
             <div class="img">
+              <img
+                src="./assets/images/Mercedes-Benz-EQ-Formula_E_Team_santiago_teserjpeg.webp"
+                class="image"
+              />
+
               <div class="img__text">
                 <h2>Mercedes-EQ Formula E Team</h2>
                 <p>
@@ -246,12 +544,12 @@
                   racing and our drive for lifestyle, sustainab...
                 </p>
               </div>
-              <img
-                src="./assets/images/Mercedes-Benz-EQ-Formula_E_Team_santiago_teserjpeg.webp"
-                class="image"
-              />
             </div>
             <div class="img">
+              <img
+                src="./assets/images/mercedes-eq-formula-e-team-nyck-de-vries-season-8-interview-v6_16-9jpeg.webp"
+                class="image"
+              />
               <div class="img__text">
                 <h2>"I’m most looking forward to Vancouver and Jakarta."</h2>
                 <p>
@@ -259,12 +557,12 @@
                   series with his first win in late February 202...
                 </p>
               </div>
-              <img
-                src="./assets/images/mercedes-eq-formula-e-team-nyck-de-vries-season-8-interview-v6_16-9jpeg.webp"
-                class="image"
-              />
             </div>
             <div class="img">
+              <img
+                src="./assets/images/0-mercedes-benz-festival-hyeres-Mercedes-benz-debuts-new-sustainability-prize-2560x1440.webp"
+                class="image"
+              />
               <div class="img__text">
                 <h2>Mercedes-Benz debuts new Sustainability Prize.</h2>
                 <p>
@@ -272,10 +570,6 @@
                   d’Hyères with the inaugural Mercedes-Benz Sustainab...
                 </p>
               </div>
-              <img
-                src="./assets/images/0-mercedes-benz-festival-hyeres-Mercedes-benz-debuts-new-sustainability-prize-2560x1440.webp"
-                class="image"
-              />
             </div>
             <div class="img">
               <div class="img__text">
@@ -291,6 +585,8 @@
               />
             </div>
             <div class="image-10 img">
+              <img src="./assets/images/10.jpeg" class="image" />
+
               <div class="img__text">
                 <h2>The big small world of Mercedes-Benz.</h2>
                 <p>
@@ -298,9 +594,10 @@
                   true-to-the-original miniatures of their bigger...
                 </p>
               </div>
-              <img src="./assets/images/10.jpeg" class="image" />
             </div>
             <div class="img">
+              <img src="./assets/images/11.webp" class="image" />
+
               <div class="img__text">
                 <h2>Mercedes-EQ Formula E Team</h2>
                 <p>
@@ -308,9 +605,10 @@
                   racing and our drive for lifestyle, sustainab...
                 </p>
               </div>
-              <img src="./assets/images/11.webp" class="image" />
             </div>
             <div class="img">
+              <img src="./assets/images/12.jpeg" class="image" />
+
               <div class="img__text">
                 <h2>Mercedes-Benz debuts new Sustainability Prize.</h2>
                 <p>
@@ -318,9 +616,10 @@
                   d’Hyères with the inaugural Mercedes-Benz Sustainab...
                 </p>
               </div>
-              <img src="./assets/images/12.jpeg" class="image" />
             </div>
             <div class="img">
+              <img src="./assets/images/13.webp" class="image" />
+
               <div class="img__text">
                 <h2>Mercedes-EQ Formula E Team</h2>
                 <p>
@@ -328,9 +627,10 @@
                   racing and our drive for lifestyle, sustainab...
                 </p>
               </div>
-              <img src="./assets/images/13.webp" class="image" />
             </div>
             <div class="img">
+              <img src="./assets/images/14.webp" class="image" />
+
               <div class="img__text">
                 <h2>"I’m most looking forward to Vancouver and Jakarta."</h2>
                 <p>
@@ -338,7 +638,6 @@
                   series with his first win in late February 202...
                 </p>
               </div>
-              <img src="./assets/images/14.webp" class="image" />
             </div>
           </div>
         </div>
@@ -351,6 +650,12 @@
         >
           <div class="image-container">
             <div class="image-1 img">
+              <img
+                src="./assets/images/grid-images/page2/1.webp"
+                style="width: 100%"
+                class="image"
+              />
+
               <div class="img__text">
                 <h2>VISION EQXX: The new benchmark of efficiency.</h2>
                 <p>
@@ -358,13 +663,13 @@
                   enables an electric range of over 1,000 km.
                 </p>
               </div>
-              <img
-                src="./assets/images/grid-images/page2/1.webp"
-                style="width: 100%"
-                class="image"
-              />
             </div>
             <div class="img">
+              <img
+                src="./assets/images/grid-images/page2/9.webp"
+                class="image"
+              />
+
               <div class="img__text">
                 <h2>The big small world of Mercedes-Benz.</h2>
                 <p>
@@ -372,12 +677,13 @@
                   true-to-the-original miniatures of their bigger...
                 </p>
               </div>
-              <img
-                src="./assets/images/grid-images/page2/9.webp"
-                class="image"
-              />
             </div>
             <div class="img">
+              <img
+                src="./assets/images/grid-images/page2/2.webp"
+                class="image"
+              />
+
               <div class="img__text">
                 <h2>“H” as in “Happy New Year”.</h2>
                 <p>
@@ -385,12 +691,13 @@
                   able to obtain the H number plate for the fi...
                 </p>
               </div>
-              <img
-                src="./assets/images/grid-images/page2/2.webp"
-                class="image"
-              />
             </div>
             <div class="img">
+              <img
+                src="./assets/images/grid-images/page2/3.webp"
+                class="image"
+              />
+
               <div class="img__text">
                 <h2>Stoffel Vandoorne</h2>
                 <p>
@@ -398,12 +705,13 @@
                   Formula E Team. get to know him.
                 </p>
               </div>
-              <img
-                src="./assets/images/grid-images/page2/3.webp"
-                class="image"
-              />
             </div>
             <div class="img">
+              <img
+                src="./assets/images/grid-images/page2/4.webp"
+                class="image"
+              />
+
               <div class="img__text">
                 <h2>Nyck de Vries</h2>
                 <p>
@@ -411,12 +719,13 @@
                   Formula E Team. Get to know him.
                 </p>
               </div>
-              <img
-                src="./assets/images/grid-images/page2/4.webp"
-                class="image"
-              />
             </div>
             <div class="img">
+              <img
+                src="./assets/images/grid-images/page2/5.webp"
+                class="image"
+              />
+
               <div class="img__text">
                 <h2>Mercedes-EQ Formula E Team</h2>
                 <p>
@@ -424,12 +733,13 @@
                   racing and our drive for lifestyle, sustainab...
                 </p>
               </div>
-              <img
-                src="./assets/images/grid-images/page2/5.webp"
-                class="image"
-              />
             </div>
             <div class="img">
+              <img
+                src="./assets/images/grid-images/page2/6.webp"
+                class="image"
+              />
+
               <div class="img__text">
                 <h2>"I’m most looking forward to Vancouver and Jakarta."</h2>
                 <p>
@@ -437,12 +747,13 @@
                   series with his first win in late February 202...
                 </p>
               </div>
-              <img
-                src="./assets/images/grid-images/page2/6.webp"
-                class="image"
-              />
             </div>
             <div class="img">
+              <img
+                src="./assets/images/grid-images/page2/7.webp"
+                class="image"
+              />
+
               <div class="img__text">
                 <h2>Mercedes-Benz debuts new Sustainability Prize.</h2>
                 <p>
@@ -450,12 +761,13 @@
                   d’Hyères with the inaugural Mercedes-Benz Sustainab...
                 </p>
               </div>
-              <img
-                src="./assets/images/grid-images/page2/7.webp"
-                class="image"
-              />
             </div>
             <div class="img">
+              <img
+                src="./assets/images/grid-images/page2/8.webp"
+                class="image"
+              />
+
               <div class="img__text">
                 <h2>Mercedes-EQ Formula E Team</h2>
                 <p>
@@ -463,12 +775,13 @@
                   racing and our drive for lifestyle, sustainab...
                 </p>
               </div>
-              <img
-                src="./assets/images/grid-images/page2/8.webp"
-                class="image"
-              />
             </div>
             <div class="image-10 img">
+              <img
+                src="./assets/images/grid-images/page2/10.webp"
+                class="image"
+              />
+
               <div class="img__text">
                 <h2>The big small world of Mercedes-Benz.</h2>
                 <p>
@@ -476,12 +789,13 @@
                   true-to-the-original miniatures of their bigger...
                 </p>
               </div>
-              <img
-                src="./assets/images/grid-images/page2/10.webp"
-                class="image"
-              />
             </div>
             <div class="img">
+              <img
+                src="./assets/images/grid-images/page2/11.webp"
+                class="image"
+              />
+
               <div class="img__text">
                 <h2>Mercedes-EQ Formula E Team</h2>
                 <p>
@@ -489,12 +803,13 @@
                   racing and our drive for lifestyle, sustainab...
                 </p>
               </div>
-              <img
-                src="./assets/images/grid-images/page2/11.webp"
-                class="image"
-              />
             </div>
             <div class="img">
+              <img
+                src="./assets/images/grid-images/page2/12.webp"
+                class="image"
+              />
+
               <div class="img__text">
                 <h2>Mercedes-Benz debuts new Sustainability Prize.</h2>
                 <p>
@@ -502,12 +817,13 @@
                   d’Hyères with the inaugural Mercedes-Benz Sustainab...
                 </p>
               </div>
-              <img
-                src="./assets/images/grid-images/page2/12.webp"
-                class="image"
-              />
             </div>
             <div class="img">
+              <img
+                src="./assets/images/grid-images/page2/13.webp"
+                class="image"
+              />
+
               <div class="img__text">
                 <h2>Mercedes-EQ Formula E Team</h2>
                 <p>
@@ -515,12 +831,13 @@
                   racing and our drive for lifestyle, sustainab...
                 </p>
               </div>
-              <img
-                src="./assets/images/grid-images/page2/13.webp"
-                class="image"
-              />
             </div>
             <div class="img">
+              <img
+                src="./assets/images/grid-images/page2/14.webp"
+                class="image"
+              />
+
               <div class="img__text">
                 <h2>"I’m most looking forward to Vancouver and Jakarta."</h2>
                 <p>
@@ -528,10 +845,6 @@
                   series with his first win in late February 202...
                 </p>
               </div>
-              <img
-                src="./assets/images/grid-images/page2/14.webp"
-                class="image"
-              />
             </div>
           </div>
         </div>
@@ -543,27 +856,37 @@
         >
           <div class="image-container">
             <div class="image-1 img">
-              <div class="img__icon">
-                <i class="fas fa-play"></i>
-                <p>02:02</p>
+              <div class="position-relative" style="height: 100%">
+                <img
+                  src="./assets/images/grid-images/page3/1.webp"
+                  style="width: 100%"
+                  class="image"
+                />
+
+                <div class="img__icon">
+                  <i class="fas fa-play"></i>
+                  <p>02:02</p>
+                </div>
               </div>
               <div class="img__text">
-                <h2>VISION EQXX: The new benchmark of efficiency.</h2>
+                <h2>Mercedes-EQ and SK Gaming launch Project Avarosa.</h2>
                 <p>
                   The VISION EQXX sets new standards for aerodynamics and
                   enables an electric range of over 1,000 km.
                 </p>
               </div>
-              <img
-                src="./assets/images/grid-images/page3/1.webp"
-                style="width: 100%"
-                class="image"
-              />
             </div>
             <div class="img">
-              <div class="img__icon">
-                <i class="fas fa-play"></i>
-                <p>02:02</p>
+              <div class="position-relative" style="height: 100%">
+                <img
+                  src="./assets/images/grid-images/page3/9.webp"
+                  class="image"
+                />
+
+                <div class="img__icon">
+                  <i class="fas fa-play"></i>
+                  <p>02:02</p>
+                </div>
               </div>
               <div class="img__text">
                 <h2>The big small world of Mercedes-Benz.</h2>
@@ -572,15 +895,18 @@
                   true-to-the-original miniatures of their bigger...
                 </p>
               </div>
-              <img
-                src="./assets/images/grid-images/page3/9.webp"
-                class="image"
-              />
             </div>
             <div class="img">
-              <div class="img__icon">
-                <i class="fas fa-play"></i>
-                <p>02:02</p>
+              <div class="position-relative" style="height: 100%">
+                <img
+                  src="./assets/images/grid-images/page3/2.webp"
+                  class="image"
+                />
+
+                <div class="img__icon">
+                  <i class="fas fa-play"></i>
+                  <p>02:02</p>
+                </div>
               </div>
               <div class="img__text">
                 <h2>“H” as in “Happy New Year”.</h2>
@@ -589,15 +915,18 @@
                   able to obtain the H number plate for the fi...
                 </p>
               </div>
-              <img
-                src="./assets/images/grid-images/page3/2.webp"
-                class="image"
-              />
             </div>
             <div class="img">
-              <div class="img__icon">
-                <i class="fas fa-play"></i>
-                <p>02:02</p>
+              <div class="position-relative" style="height: 100%">
+                <img
+                  src="./assets/images/grid-images/page3/3.webp"
+                  class="image"
+                />
+
+                <div class="img__icon">
+                  <i class="fas fa-play"></i>
+                  <p>02:02</p>
+                </div>
               </div>
               <div class="img__text">
                 <h2>Stoffel Vandoorne</h2>
@@ -606,12 +935,13 @@
                   Formula E Team. get to know him.
                 </p>
               </div>
-              <img
-                src="./assets/images/grid-images/page3/3.webp"
-                class="image"
-              />
             </div>
             <div class="img">
+              <img
+                src="./assets/images/grid-images/page3/4.jpeg"
+                class="image"
+              />
+
               <div class="img__text">
                 <h2>Nyck de Vries</h2>
                 <p>
@@ -619,15 +949,18 @@
                   Formula E Team. Get to know him.
                 </p>
               </div>
-              <img
-                src="./assets/images/grid-images/page3/4.jpeg"
-                class="image"
-              />
             </div>
             <div class="img">
-              <div class="img__icon">
-                <i class="fas fa-play"></i>
-                <p>02:02</p>
+              <div class="position-relative" style="height: 100%">
+                <img
+                  src="./assets/images/grid-images/page3/5.webp"
+                  class="image"
+                />
+
+                <div class="img__icon">
+                  <i class="fas fa-play"></i>
+                  <p>02:02</p>
+                </div>
               </div>
               <div class="img__text">
                 <h2>Mercedes-EQ Formula E Team</h2>
@@ -636,15 +969,18 @@
                   racing and our drive for lifestyle, sustainab...
                 </p>
               </div>
-              <img
-                src="./assets/images/grid-images/page3/5.webp"
-                class="image"
-              />
             </div>
             <div class="img">
-              <div class="img__icon">
-                <i class="fas fa-play"></i>
-                <p>02:02</p>
+              <div class="position-relative" style="height: 100%">
+                <img
+                  src="./assets/images/grid-images/page3/6.webp"
+                  class="image"
+                />
+
+                <div class="img__icon">
+                  <i class="fas fa-play"></i>
+                  <p>02:02</p>
+                </div>
               </div>
               <div class="img__text">
                 <h2>"I’m most looking forward to Vancouver and Jakarta."</h2>
@@ -653,15 +989,18 @@
                   series with his first win in late February 202...
                 </p>
               </div>
-              <img
-                src="./assets/images/grid-images/page3/6.webp"
-                class="image"
-              />
             </div>
             <div class="img">
-              <div class="img__icon">
-                <i class="fas fa-play"></i>
-                <p>02:02</p>
+              <div class="position-relative" style="height: 100%">
+                <img
+                  src="./assets/images/grid-images/page3/7.webp"
+                  class="image"
+                />
+
+                <div class="img__icon">
+                  <i class="fas fa-play"></i>
+                  <p>02:02</p>
+                </div>
               </div>
               <div class="img__text">
                 <h2>Mercedes-Benz debuts new Sustainability Prize.</h2>
@@ -670,15 +1009,18 @@
                   d’Hyères with the inaugural Mercedes-Benz Sustainab...
                 </p>
               </div>
-              <img
-                src="./assets/images/grid-images/page3/7.webp"
-                class="image"
-              />
             </div>
             <div class="img">
-              <div class="img__icon">
-                <i class="fas fa-play"></i>
-                <p>02:02</p>
+              <div class="position-relative" style="height: 100%">
+                <img
+                  src="./assets/images/grid-images/page3/8.webp"
+                  class="image"
+                />
+
+                <div class="img__icon">
+                  <i class="fas fa-play"></i>
+                  <p>02:02</p>
+                </div>
               </div>
               <div class="img__text">
                 <h2>Mercedes-EQ Formula E Team</h2>
@@ -687,15 +1029,18 @@
                   racing and our drive for lifestyle, sustainab...
                 </p>
               </div>
-              <img
-                src="./assets/images/grid-images/page3/8.webp"
-                class="image"
-              />
             </div>
             <div class="image-10 img">
-              <div class="img__icon">
-                <i class="fas fa-play"></i>
-                <p>02:02</p>
+              <div class="position-relative" style="height: 100%">
+                <img
+                  src="./assets/images/grid-images/page3/10.webp"
+                  class="image"
+                />
+
+                <div class="img__icon">
+                  <i class="fas fa-play"></i>
+                  <p>02:02</p>
+                </div>
               </div>
               <div class="img__text">
                 <h2>The big small world of Mercedes-Benz.</h2>
@@ -704,15 +1049,18 @@
                   true-to-the-original miniatures of their bigger...
                 </p>
               </div>
-              <img
-                src="./assets/images/grid-images/page3/10.webp"
-                class="image"
-              />
             </div>
             <div class="img">
-              <div class="img__icon">
-                <i class="fas fa-play"></i>
-                <p>02:02</p>
+              <div class="position-relative" style="height: 100%">
+                <img
+                  src="./assets/images/grid-images/page3/11.webp"
+                  class="image"
+                />
+
+                <div class="img__icon">
+                  <i class="fas fa-play"></i>
+                  <p>02:02</p>
+                </div>
               </div>
               <div class="img__text">
                 <h2>Mercedes-EQ Formula E Team</h2>
@@ -721,12 +1069,13 @@
                   racing and our drive for lifestyle, sustainab...
                 </p>
               </div>
-              <img
-                src="./assets/images/grid-images/page3/11.webp"
-                class="image"
-              />
             </div>
             <div class="img">
+              <img
+                src="./assets/images/grid-images/page3/12.webp"
+                class="image"
+              />
+
               <div class="img__text">
                 <h2>Mercedes-Benz debuts new Sustainability Prize.</h2>
                 <p>
@@ -734,15 +1083,18 @@
                   d’Hyères with the inaugural Mercedes-Benz Sustainab...
                 </p>
               </div>
-              <img
-                src="./assets/images/grid-images/page3/12.webp"
-                class="image"
-              />
             </div>
             <div class="img">
-              <div class="img__icon">
-                <i class="fas fa-play"></i>
-                <p>02:02</p>
+              <div class="position-relative" style="height: 100%">
+                <img
+                  src="./assets/images/grid-images/page3/13.webp"
+                  class="image"
+                />
+
+                <div class="img__icon">
+                  <i class="fas fa-play"></i>
+                  <p>02:02</p>
+                </div>
               </div>
               <div class="img__text">
                 <h2>Mercedes-EQ Formula E Team</h2>
@@ -751,16 +1103,19 @@
                   racing and our drive for lifestyle, sustainab...
                 </p>
               </div>
-              <img
-                src="./assets/images/grid-images/page3/13.webp"
-                class="image"
-              />
             </div>
             <div class="img">
-              <div class="img__icon">
-                <i class="fas fa-play"></i>
-                <p>02:02</p>
+              <div class="position-relative" style="height: 100%">
+                <img
+                  src="./assets/images/grid-images/page3/14.webp"
+                  class="image"
+                />
+                <div class="img__icon">
+                  <i class="fas fa-play"></i>
+                  <p>02:02</p>
+                </div>
               </div>
+
               <div class="img__text">
                 <h2>"I’m most looking forward to Vancouver and Jakarta."</h2>
                 <p>
@@ -768,10 +1123,6 @@
                   series with his first win in late February 202...
                 </p>
               </div>
-              <img
-                src="./assets/images/grid-images/page3/14.webp"
-                class="image"
-              />
             </div>
           </div>
         </div>
@@ -779,7 +1130,7 @@
       <button class="btn--showmore">
         <i
           class="fas fa-chevron-down"
-          style="margin-right: 10px; font-size: 12px; color: #b4b4b4"
+          style="margin-right: 10px; font-size: 16px"
         ></i
         >Show more
       </button>
@@ -1390,6 +1741,7 @@
         </div>
       </div>
     </footer>
+
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -1417,5 +1769,21 @@
     <!-- back to top  -->
     <script src="./assets/libs/back-to-top/main.js"></script>
     <script src="./assets/libs/back-to-top/util.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        autoplay: {
+          delay: 1000,
+        },
+      });
+    </script>
   </body>
 </html>

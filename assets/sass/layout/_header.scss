@@ -1,0 +1,95 @@
+.header {
+  width    : 100%;
+  margin   : 0 auto;
+  font-size: 16px;
+
+  &__content {
+    max-width      : 1440px;
+    margin         : 0 auto;
+    display        : flex;
+    justify-content: space-around;
+  }
+
+
+  &__logo {
+    a {
+      display       : flex;
+      margin-top    : 20px;
+      padding-bottom: 20px;
+
+      img {
+        width       : 100%;
+        margin-right: 6rem;
+      }
+
+      img:last-child {
+        margin-top: 10px;
+      }
+    }
+  }
+
+  &__right {
+    display: flex;
+
+    .hide {
+      @include Responsive(XL) {
+        display: none;
+      }
+    }
+
+    .menu__sub {
+      ul {
+        display        : flex;
+        justify-content: flex-end;
+
+        li {
+          color  : #fff;
+          padding: 10px 20px;
+
+          @include Responsive(XL) {
+            padding-left: 0;
+          }
+
+          svg {
+            margin-right: 10px;
+            margin-top  : -10px;
+
+            @include Responsive(XL) {
+              margin-right: 0px;
+            }
+          }
+        }
+      }
+    }
+
+    .menu__main {
+      display         : flex;
+      margin-top      : 2rem;
+      justify-content : end !important;
+      background-color: transparent !important;
+      color           : #fff;
+      margin-top      : 0;
+      .show {
+        color: #fff;
+        display: none;
+        @include Responsive(XL) {
+          display: block;
+        }
+      }
+      .navbar-toggler {
+        .navbar-toggler-icon {
+          background-image: url("data:image/svg+xml,<svg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'><path stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/></svg>");
+        }
+      }
+
+      ul {
+        display: flex;
+
+        li a {
+          padding: 15px 0px !important;
+          color  : #fff !important;
+        }
+      }
+    }
+  }
+}

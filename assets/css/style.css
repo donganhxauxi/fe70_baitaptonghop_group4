@@ -147,7 +147,27 @@ table {
 *::before {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; }
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 14px;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "Times New Roman", Helvetica, Arial, sans-serif;
+}
+
+.card {
+  margin-top: 12px;
+}
+.card .item {
+  width: 80%;
+}
+
+/*# sourceMappingURL=style.css.map */
+
 
 html {
   font-size: 10px;
