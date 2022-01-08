@@ -218,22 +218,22 @@ a:link {
   .image-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(5, 12vw); }
+     }
     @media screen and (max-width: 1580px) {
       .image-container {
         display: grid;
         grid-template-columns: auto auto auto;
-        grid-template-rows: repeat(6, 18vw); } }
+        } }
     @media screen and (max-width: 1280px) {
       .image-container {
         display: grid;
         grid-template-columns: auto auto;
-        grid-template-rows: repeat(7, 24vw); } }
+         } }
     @media screen and (max-width: 768px) {
       .image-container {
         display: grid;
         grid-template-columns: auto;
-        grid-template-rows: repeat(8, 48vw); } }
+       } }
   .image-1 {
     grid-column-start: 1;
     grid-column-end: 3;
