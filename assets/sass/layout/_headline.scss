@@ -6,7 +6,7 @@
     font-size: 34px;
     line-height: 44px;
     margin: 14px auto;
-    @include Responsive(LG){
+    @include Responsive(LG) {
       font-size: 26px;
       line-height: 32px;
     }
@@ -20,13 +20,13 @@
   &__text {
     padding: 110px 0;
   }
-  .container-text{
+  .container-text {
     max-width: 520px !important;
     margin: 0 auto;
     padding: 0;
-    a:not(.btn){
+    a:not(.btn) {
       color: $color-secondary;
-      &:hover{
+      &:hover {
         color: $active-theme;
         text-decoration: underline;
       }
@@ -76,7 +76,7 @@
             height: 100%;
             margin: 0 9px;
             @include Responsive(MD) {
-              margin: 0 4.48px ;
+              margin: 0 4.48px;
             }
           }
         }
