@@ -706,6 +706,12 @@ a:link {
   display: flex;
 }
 
+@media only screen and (max-width: 1279px) {
+  .header__right .hide {
+    display: none;
+  }
+}
+
 .header__right .menu__sub ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -720,9 +726,21 @@ a:link {
   padding: 10px 20px;
 }
 
+@media only screen and (max-width: 1279px) {
+  .header__right .menu__sub ul li {
+    padding-left: 0;
+  }
+}
+
 .header__right .menu__sub ul li svg {
   margin-right: 10px;
   margin-top: -10px;
+}
+
+@media only screen and (max-width: 1279px) {
+  .header__right .menu__sub ul li svg {
+    margin-right: 0px;
+  }
 }
 
 .header__right .menu__main {
@@ -730,6 +748,27 @@ a:link {
   display: -ms-flexbox;
   display: flex;
   margin-top: 2rem;
+  -webkit-box-pack: end !important;
+      -ms-flex-pack: end !important;
+          justify-content: end !important;
+  background-color: transparent !important;
+  color: #fff;
+  margin-top: 0;
+}
+
+.header__right .menu__main .show {
+  color: #fff;
+  display: none;
+}
+
+@media only screen and (max-width: 1279px) {
+  .header__right .menu__main .show {
+    display: block;
+  }
+}
+
+.header__right .menu__main .navbar-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,<svg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'><path stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/></svg>");
 }
 
 .header__right .menu__main ul {
@@ -739,8 +778,8 @@ a:link {
 }
 
 .header__right .menu__main ul li a {
-  color: #fff;
-  padding: 10px 20px;
+  padding: 15px 0px !important;
+  color: #fff !important;
 }
 
 .carousel {
